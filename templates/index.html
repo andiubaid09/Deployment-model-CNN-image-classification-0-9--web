@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Angka CNN</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔢 Prediksi Angka CNN</h1>
+            <p>Gambar angka 1-10 pada canvas di bawah ini</p>
+        </div>
+
+        <div class="instructions">
+            <h3>📝 Cara Penggunaan:</h3>
+            <ul>
+                <li>Gambar angka dengan jelas pada canvas putih</li>
+                <li>Gunakan mouse atau jari untuk menggambar</li>
+                <li>Klik "Prediksi" untuk melihat hasil</li>
+                <li>Klik "Bersihkan" untuk menggambar ulang</li>
+            </ul>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="drawingCanvas" width="350" height="350"></canvas>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-clear" onclick="clearCanvas()">🗑️ Bersihkan</button>
+            <button class="btn btn-predict" onclick="predictDigit()">🔮 Prediksi</button>
+        </div>
+
+        <div class="loading" id="loadingDiv">
+            <div class="spinner"></div>
+            <span>Memproses prediksi...</span>
+        </div>
+
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <div class="result-title">Hasil Prediksi:</div>
+            <div class="prediction-result" id="predictionResult">-</div>
+            <div class="confidence" id="confidenceText">Gambar angka untuk melihat prediksi</div>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
